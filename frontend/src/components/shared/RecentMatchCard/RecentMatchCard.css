@@ -1,0 +1,78 @@
+.card-container {
+  background-color: white;
+  min-height: 37%;
+  margin: 0.7rem 0.5rem;
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
+  box-sizing: border-box;
+  border: 1px solid #ececec;
+  display: flex;
+  flex-direction: row;
+}
+
+.left-content {
+  height: 100%;
+  width: 70%;
+  padding: 0 1rem;
+  border-right: 1px solid #ececec;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+.team-content {
+  width: 100%;
+  height: 50%;
+  margin: 0.3rem 0;
+  padding: 0 0.5rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: left;
+  box-sizing: border-box;
+}
+
+.team-content p {
+  color: #555;
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+.team-content__text1 {
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.team-content__text1 img {
+  height: 80%;
+  margin-right: 0.5rem;
+}
+
+.right-content {
+  height: 100%;
+  width: 30%;
+  padding: 0 0.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.right-content span p {
+  font-size: 0.8rem;
+  font-weight: 500;
+  margin: 0 0;
+  /* color: #ff1b68; */
+}
+
+.card-container:nth-child(2n + 1) .right-content span p {
+  color: #ff1b68;
+}
+
+.card-container:nth-child(2n) .right-content span p {
+  color: #1b89ff;
+}
