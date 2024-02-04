@@ -44,3 +44,15 @@ export const findRecentMatches = (allMatches) => {
 
   return recentMatches.reverse();
 };
+
+export const findUpcomingMatches = (allMatches) => {
+  const upcomingMatches = allMatches.filter((match) => {
+    const dateArray = match.date.split("-");
+    const matchDate = Number(dateArray[0]);
+    const matchMonth = Number(dateArray[1]);
+
+    return matchMonth > month || (matchMonth == month && matchDate > day);
+  });
+
+  return upcomingMatches;
+};

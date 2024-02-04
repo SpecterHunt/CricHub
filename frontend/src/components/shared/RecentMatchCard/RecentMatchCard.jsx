@@ -10,6 +10,11 @@ const RecentMatchCard = ({
   logo1,
   logo2,
   result,
+  date,
+  day,
+  _id,
+  time,
+  stadium,
 }) => {
   const image1 = `./src/assets/${logo1}.jpg`;
   const image2 = `./src/assets/${logo2}.jpg`;
@@ -35,17 +40,28 @@ const RecentMatchCard = ({
           </div>
         </div>
       </div>
-      <div className="right-content">
-        <span>
-          <p>{winner}</p>
-        </span>
-        <span>
-          <p>Won By</p>
-        </span>
-        <span>
-          <p>{result}</p>
-        </span>
-      </div>
+      {score1 ? (
+        <div className="right-content">
+          <span>
+            <p>{winner}</p>
+          </span>
+          <span>
+            <p>Won By</p>
+          </span>
+          <span>
+            <p>{result}</p>
+          </span>
+        </div>
+      ) : (
+        <div className="right2-content">
+          <span>
+            <p>{time}</p>
+          </span>
+          <span>
+            <p>{stadium}</p>
+          </span>
+        </div>
+      )}
     </div>
   );
 };

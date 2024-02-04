@@ -17,16 +17,19 @@ class App extends Component {
     pointsTable: [],
     todaysData: [],
     recentMatchesData: [],
+    upcomingMatches: [],
   };
 
   async componentDidMount() {
     const pointsTable = await ApiData.getPointsTableData();
-    const { todaysData, recentMatchesData } = await ApiData.getMatchesData();
+    const { todaysData, recentMatchesData, upcomingMatches } =
+      await ApiData.getMatchesData();
     this.setState({
       pointsTable,
       todaysData,
       recentMatchesData,
       isFetching: false,
+      upcomingMatches,
     });
   }
 
@@ -46,7 +49,17 @@ class App extends Component {
             }
             exact
           />
-          <Route path="/schedule" element={<Schedule />} />
+          <Route
+            path="/schedule"
+            element={
+              <Schedule
+                isFetching={this.state.isFetching}
+                todaysData={this.state.todaysData}
+                recentMatchesData={this.state.recentMatchesData}
+                upcomingMatches={this.state.upcomingMatches}
+              />
+            }
+          />
           <Route path="/stats" element={<Stats />} />
           <Route path="/fantasy" element={<Fantasy />} />
         </Routes>

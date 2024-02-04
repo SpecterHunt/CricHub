@@ -14,18 +14,18 @@ const Home = ({ todaysData, recentMatchesData, isFetching }) => {
       <div className="home-top">
         <CapHolderCard
           cap={OrangeCap}
-          playerName="Rohit Sharma"
-          stats="180 Runs"
+          playerName="Shikhar Dhawan"
+          stats="233 Runs"
         />
         <CapHolderCard
           cap={PurpleCap}
-          playerName="Mark Wood"
-          stats="8 Wickets"
+          playerName="Yuzvendra Chahal"
+          stats="10 Wickets"
         />
       </div>
       <div className="home-bottom">
         <div className="para-wrapper">
-          <p>Today's Match</p>
+          <p>{`Today's Match${todaysData.length > 1 ? "es" : ""}`}</p>
         </div>
         <div className="today-card">
           {!isFetching && todaysData.length == 0 ? (
@@ -62,16 +62,18 @@ const Home = ({ todaysData, recentMatchesData, isFetching }) => {
             const result = match.wonByMargin;
             const winner = match.winner;
             return (
-              <RecentMatchCard
-                team1={team1}
-                team2={team2}
-                winner={winner}
-                score1={score1}
-                score2={score2}
-                logo1={logo1}
-                logo2={logo2}
-                result={result}
-              />
+              <div className="recent-card-wrapper">
+                <RecentMatchCard
+                  team1={team1}
+                  team2={team2}
+                  winner={winner}
+                  score1={score1}
+                  score2={score2}
+                  logo1={logo1}
+                  logo2={logo2}
+                  result={result}
+                />
+              </div>
             );
           })}
         </div>

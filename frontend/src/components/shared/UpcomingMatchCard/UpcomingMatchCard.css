@@ -1,0 +1,12 @@
+.upcoming-card-container {
+  margin: 0.7rem 0.5rem;
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
+  box-sizing: border-box;
+  background-color: white;
+  border: 1px solid #ececec;
+  display: flex;
+  flex-direction: column;
+  height: 15%;
+  width: 40%;
+}

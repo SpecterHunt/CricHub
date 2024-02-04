@@ -1,0 +1,45 @@
+.schedule-container {
+  box-sizing: border-box;
+}
+.upcoming-container {
+  height: 85%;
+  overflow-y: auto;
+}
+.schedule-card-container {
+  margin: 0.7rem 0.5rem;
+  height: 22%;
+  padding: 0.7rem;
+}
+.schedule-card-wrapper {
+  margin-top: 0.5rem;
+  height: 85%;
+}
+.date-wrapper {
+  height: 15%;
+}
+.date-wrapper p {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #555;
+}
+.para-container p {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #555;
+}
+
+.para-container {
+  height: 15%;
+  display: flex;
+  align-items: last baseline;
+}
+
+.upcoming-container::-webkit-scrollbar {
+  display: none; /* for Chrome, Safari and Opera */
+}
+
+.upcoming-container {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}

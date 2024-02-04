@@ -1,13 +1,16 @@
 .card-container {
   background-color: white;
-  min-height: 37%;
-  margin: 0.7rem 0.5rem;
+  height: 100%;
+  /* margin: 0.7rem 0.5rem; */
   padding: 0.5rem 1rem;
   border-radius: 1rem;
   box-sizing: border-box;
   border: 1px solid #ececec;
   display: flex;
   flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 7px 10px 0px rgba(189, 189, 189, 0.301);
 }
 
 .left-content {
@@ -20,6 +23,7 @@
   align-items: center;
   justify-content: center;
   box-sizing: border-box;
+  font-weight: 600;
 }
 
 .team-content {
@@ -69,10 +73,28 @@
   /* color: #ff1b68; */
 }
 
-.card-container:nth-child(2n + 1) .right-content span p {
+.recent-card-wrapper:nth-child(2n + 1) .card-container .right-content span p {
   color: #ff1b68;
 }
 
-.card-container:nth-child(2n) .right-content span p {
+.recent-card-wrapper:nth-child(2n) .card-container .right-content span p {
   color: #1b89ff;
+}
+
+.right2-content {
+  height: 100%;
+  width: 30%;
+  padding: 0 0.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.right2-content span p {
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin: 0 0;
+  color: #888;
+  /* color: #ff1b68; */
 }

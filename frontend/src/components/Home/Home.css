@@ -59,3 +59,9 @@
   color: #aaa;
   align-items: center;
 }
+
+.recent-card-wrapper {
+  min-height: 37%;
+  box-sizing: border-box;
+  margin: 0.7rem 0.5rem;
+}
